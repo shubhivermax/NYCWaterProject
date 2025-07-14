@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.headingg{
+  font-size: 60px;
+  padding-bottom: 10%;
+  font-family:  "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -9,10 +20,10 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  color: white;
-  background-color: white;
   min-height: 100vh;
   color: black;
+  background: white url('./assets/water3.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 
@@ -20,7 +31,8 @@ body {
 
 .feildbox {
   border: 1px solid black;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -86,9 +98,10 @@ body {
 
 .stats-panel {
   flex: 1;
+  background: radial-gradient(#e0eef9,#1f2f4c);
   min-width: 180px;
   max-width: 250px;
-  background: #f5f5f5;
+  
   border-radius: 8px;
   margin-right: 24px;
   padding: 16px;

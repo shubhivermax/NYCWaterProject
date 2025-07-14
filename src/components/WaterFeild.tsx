@@ -104,7 +104,7 @@ const WaterFeild = () => {
           ))}
         </select>
         {visibleCount < filteredData.length && (
-          <button onClick={handleLoadMore}>Add +</button>
+          <button onClick={handleLoadMore}>Add A Record +</button>
         )}
         <div className="flex-container">
           {filteredData.slice(0, visibleCount).map((item: any, idx: number) => (

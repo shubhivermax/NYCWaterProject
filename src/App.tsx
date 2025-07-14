@@ -9,7 +9,7 @@ function App() {
 
     <>
     
-      <h1>The NYC Water Project</h1>
+      <div className='headingg'>The NYC Water Project</div>
       <div className='flex-container-2'>
         
         <div><WaterFeild /></div>
