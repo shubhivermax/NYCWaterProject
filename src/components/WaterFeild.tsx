@@ -3,6 +3,7 @@ import axios from 'axios';
 import type { AxiosResponse } from 'axios';
 import '../App.css';
 import Graph from './Graph';
+import { Link } from 'react-router-dom';
 
 const WaterFeild = () => {
   const [waterData, setWaterData] = useState<any[]>([]);
@@ -74,7 +75,10 @@ const WaterFeild = () => {
   
 
   return (
+    <div>
+    <h1>The NYC Water Project</h1>
     <div className="main-flex-container">
+      
       {/* Left: Stats */}
       <div className='leftpanel'>
       <div className="stats-panel">
@@ -108,7 +112,8 @@ const WaterFeild = () => {
         )}
         <div className="flex-container">
           {filteredData.slice(0, visibleCount).map((item: any, idx: number) => (
-            <div className='feildbox' key={idx}>
+          <Link to={`/details/${encodeURIComponent(item.sample_site)}`} key={idx} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className='feildbox'>
               <div>Site: {item.sample_site}</div>
               <div>Time: {item.sample_time}</div>
               <div>Class: {item.sample_class}</div>
@@ -116,9 +121,12 @@ const WaterFeild = () => {
               <div>Turbidity (NTU): {item.turbidity_ntu}</div>
               <hr />
             </div>
+          </Link>
+          
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };
