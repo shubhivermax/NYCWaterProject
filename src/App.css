@@ -139,6 +139,7 @@ body {
 
 .chart-box {
   background-color: black;
+ 
   border: 3px solid #2b4e5f;
   box-shadow: 0 0 10px 3px white; /* white glow shadow */
   border-radius: 8px;

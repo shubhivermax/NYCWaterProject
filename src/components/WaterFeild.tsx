@@ -119,7 +119,11 @@ const WaterFeild = () => {
             <XAxis dataKey="sample_time" tickFormatter={(tick) => tick ? tick.slice(11,16) : ''} />
             <YAxis domain={['auto', 'auto']} />
             <Tooltip />
-            <Legend />
+            <Legend
+              verticalAlign="bottom"
+              align="center"
+              wrapperStyle={{ bottom: 10, left: 0, right: 0, position: 'absolute' }}
+            />
             <Line
               type="monotone"
               dataKey="residual_free_chlorine_mg_l"
