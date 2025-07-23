@@ -112,6 +112,7 @@ body {
 .waterfields-panel {
   flex: 3;
   width: 100%;
+  padding-left: 50px;
 }
 
 .graph1{
@@ -134,4 +135,16 @@ body {
   border-radius: 10px;
   margin: 20px;
   max-width: 600px;
+}
+
+.chart-box {
+  background-color: black;
+  border: 3px solid #2b4e5f;
+  box-shadow: 0 0 10px 3px white; /* white glow shadow */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: white; /* for text inside */
+  
+  margin-right: 20px; /* Add right margin */
 }

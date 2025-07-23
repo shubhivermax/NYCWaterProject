@@ -110,8 +110,8 @@ const WaterFeild = () => {
       </div>
 
       <div className='graph1'>
-      <div className='graph1' style={{ width: '100%', height: 300, marginBottom: '2rem' }}>
-       <div className="chart-box" style={{ width: '100%', height: 300 }}>
+      <div className="chart-box" style={{ width: '100%', height: 300 }}>
+       
         <h3>Chlorine Levels Over Time</h3>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData}>
@@ -129,10 +129,10 @@ const WaterFeild = () => {
             />
           </LineChart>
         </ResponsiveContainer>
-       </div>
+       
       </div>
 
-      <div className='graph2' style={{ width: '100%', height: 300 }}>
+      <div className="chart-box" style={{ width: '100%', height: 300 }}>
         <h3>Turbidity Levels Over Time</h3>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData}>
