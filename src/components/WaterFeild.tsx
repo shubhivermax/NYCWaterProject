@@ -4,6 +4,17 @@ import type { AxiosResponse } from 'axios';
 import '../App.css';
 import Graph from './Graph';
 import { Link } from 'react-router-dom';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
+
 
 const WaterFeild = () => {
   const [waterData, setWaterData] = useState<any[]>([]);
@@ -71,6 +82,14 @@ const WaterFeild = () => {
           })
         ).toFixed(3)
       : 'N/A';
+    
+  const chartData = displayedData.map((item, idx) => ({
+    index: idx + 1, // or idx
+    residual_free_chlorine_mg_l: parseFloat(item.residual_free_chlorine_mg_l) || 0,
+    turbidity_ntu: parseFloat(item.turbidity_ntu) || 0,
+   }));
+      
+   console.log('chartData:', chartData);
 
   
 
@@ -87,9 +106,50 @@ const WaterFeild = () => {
         <div>Average Chlorine (mg/L): {avgChlorine}</div>
         <div>Highest Chlorine (mg/L): {maxChlorine}</div>
       </div>
+
       <div className='graph1'>
-            A graph goes here.
+      <div className='graph1' style={{ width: '100%', height: 300, marginBottom: '2rem' }}>
+        <h3>Chlorine Levels Over Time</h3>
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={chartData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="sample_time" tickFormatter={(tick) => tick ? tick.slice(11,16) : ''} />
+            <YAxis domain={['auto', 'auto']} />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="residual_free_chlorine_mg_l"
+              name="Chlorine (mg/L)"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
+
+      <div className='graph2' style={{ width: '100%', height: 300 }}>
+        <h3>Turbidity Levels Over Time</h3>
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={chartData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="sample_time" tickFormatter={(tick) => tick ? tick.slice(11,16) : ''} />
+            <YAxis domain={['auto', 'auto']} />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="turbidity_ntu"
+              name="Turbidity (NTU)"
+              stroke="#82ca9d"
+              activeDot={{ r: 8 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+      </div>
+      
+
       </div>
       {/* Right: Water Fields */}
       <div className="waterfields-panel">
