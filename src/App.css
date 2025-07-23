@@ -22,8 +22,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   color: black;
-  background: white url('./assets/water3.png') no-repeat center center fixed;
-  background-size: cover;
+
+  /* Ombre gradient from top (#2f708b) to bottom (#b9dee8) */
+  background: linear-gradient(to bottom, #2f708b, #b9dee8);
 }
 
 

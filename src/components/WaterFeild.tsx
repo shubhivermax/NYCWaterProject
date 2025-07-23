@@ -84,10 +84,12 @@ const WaterFeild = () => {
       : 'N/A';
     
   const chartData = displayedData.map((item, idx) => ({
-    index: idx + 1, // or idx
+    index: idx + 1,
+    sample_time: item.sample_time,  // <-- add this!
     residual_free_chlorine_mg_l: parseFloat(item.residual_free_chlorine_mg_l) || 0,
     turbidity_ntu: parseFloat(item.turbidity_ntu) || 0,
-   }));
+  }));
+      
       
    console.log('chartData:', chartData);
 
@@ -109,6 +111,7 @@ const WaterFeild = () => {
 
       <div className='graph1'>
       <div className='graph1' style={{ width: '100%', height: 300, marginBottom: '2rem' }}>
+       <div className="chart-box" style={{ width: '100%', height: 300 }}>
         <h3>Chlorine Levels Over Time</h3>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData}>
@@ -126,6 +129,7 @@ const WaterFeild = () => {
             />
           </LineChart>
         </ResponsiveContainer>
+       </div>
       </div>
 
       <div className='graph2' style={{ width: '100%', height: 300 }}>
