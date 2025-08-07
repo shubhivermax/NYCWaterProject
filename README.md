@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# 💧 NYC Water Quality Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive dashboard that visualizes water sample data from New York City, built using **React**, **TypeScript**, **CSS**, **Recharts**, and the **NYC Open Data API**.
 
-Currently, two official plugins are available:
+## 🔗 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> ⚠️ *Note: The Loom link above is from another project — replace it with your own Loom walkthrough if needed!*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📊 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ✅ Fetches live data from the **NYC Open Data API**
+- ✅ Displays a **dashboard with 10+ unique items**, one per row
+- ✅ Each row shows **at least two features** (e.g. borough, sampling date)
+- ✅ Built using **`useEffect`** and **`async/await`** to handle API calls
+- ✅ Includes **three+ summary statistics**, such as:
+  - Total number of samples in the dataset
+  - Mean chlorine level (or another relevant metric)
+  - Range or quartile-based insights
+- ✅ **Search bar**:
+  - Filters items live as the user types
+  - Matches items based on search terms
+- ✅ **Category filter**:
+  - Filters items by another attribute (e.g. borough or result)
+  - Works independently from the search bar
+  - Both search and filter dynamically update the results
+- ✅ Includes visualizations using **Recharts** for trends and summaries
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend:** React, TypeScript (TSX), CSS
+- **Charts:** Recharts
+- **Data Source:** NYC Open Data API
+- **Hooks Used:** `useState`, `useEffect`, `async/await`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/nyc-water-dashboard.git
+
+# Navigate into the project
+cd nyc-water-dashboard
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
+
