@@ -39,11 +39,17 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<div>
+    <a href="https://www.loom.com/share/b1ee8b0469404540942cb547a95a910b">
+      <p>NYC Water Project Overview - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/b1ee8b0469404540942cb547a95a910b">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/b1ee8b0469404540942cb547a95a910b-95258b6627f29737-full-play.gif">
+    </a>
+  </div>
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with Loom
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -51,11 +57,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Filtering was a little challenging
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2025 Shubhi Verma
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
