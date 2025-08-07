@@ -1,59 +1,70 @@
-# 💧 NYC Water Quality Dashboard
+# Web Development Project 5 - *NYC Water Samples Quality Dashboard*
 
-An interactive dashboard that visualizes water sample data from New York City, built using **React**, **TypeScript**, **CSS**, **Recharts**, and the **NYC Open Data API**.
+Submitted by: **Shubhi Verma**
 
-## 🔗 Demo
+This web app: **shows recent water sample data taken in different buroughs of NYC through data fetching using a REST API **
 
-> ⚠️ 
+Time spent: **8** hours spent in total
 
----
+## Required Features
 
-## 📊 Features
+The following **required** functionality is completed:
 
-- ✅ Fetches live data from the **NYC Open Data API**
-- ✅ Displays a **dashboard with 10+ unique items**, one per row
-- ✅ Each row shows **at least two features** (e.g. borough, sampling date)
-- ✅ Built using **`useEffect`** and **`async/await`** to handle API calls
-- ✅ Includes **three+ summary statistics**, such as:
-  - Total number of samples in the dataset
-  - Mean chlorine level (or another relevant metric)
-  - Range or quartile-based insights
-- ✅ **Search bar**:
-  - Filters items live as the user types
-  - Matches items based on search terms
-- ✅ **Category filter**:
-  - Filters items by another attribute (e.g. borough or result)
-  - Works independently from the search bar
-  - Both search and filter dynamically update the results
-- ✅ Includes visualizations using **Recharts** for trends and summaries
-- Used React Router to build navigation around the application
-Use Link to dynamically generate a list of routes
-Use useParams() hook to extract parameters from a URL
-Install and integrate an npm library into an existing React app
+- [x] **The site has a dashboard displaying a list of data fetched using an API call**
+  - The dashboard should display at least 10 unique items, one per row
+  - The dashboard includes at least two features in each row
+- [x] **`useEffect` React hook and `async`/`await` are used**
+- [x] **The app dashboard includes at least three summary statistics about the data** 
+  - The app dashboard includes at least three summary statistics about the data, such as:
+    - *insert details here*
+- [x] **A search bar allows the user to search for an item in the fetched data**
+  - The search bar **correctly** filters items in the list, only displaying items matching the search query
+  - The list of results dynamically updates as the user types into the search bar
+- [x] **An additional filter allows the user to restrict displayed items by specified categories**
+  - The filter restricts items in the list using a **different attribute** than the search bar 
+  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
+  - The dashboard list dynamically updates as the user adjusts the filter
 
----
+The following **optional** features are implemented:
 
-## 🛠 Tech Stack
+- [ ] Multiple filters can be applied simultaneously
+- [ ] Filters use different input types
+  - e.g., as a text input, a dropdown or radio selection, and/or a slider
+- [ ] The user can enter specific bounds for filter values
 
-- **Frontend:** React, TypeScript (TSX), CSS
-- **Charts:** Recharts
-- **Data Source:** NYC Open Data API
-- **Hooks Used:** `useState`, `useEffect`, `async/await`
+The following **additional** features are implemented:
 
----
+* [ ] List anything else that you added to improve the site's functionality!
 
-## 📁 Getting Started
+## Video Walkthrough
 
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/nyc-water-dashboard.git
+Here's a walkthrough of implemented user stories:
 
-# Navigate into the project
-cd nyc-water-dashboard
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-# Install dependencies
-npm install
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
-# Run the app
-npm run dev
+## Notes
 
+Describe any challenges encountered while building the app.
+
+## License
+
+    Copyright [yyyy] [name of copyright owner]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
