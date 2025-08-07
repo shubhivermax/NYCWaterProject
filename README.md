@@ -4,7 +4,7 @@ An interactive dashboard that visualizes water sample data from New York City, b
 
 ## 🔗 Demo
 
-> ⚠️ *Note: The Loom link above is from another project — replace it with your own Loom walkthrough if needed!*
+> ⚠️ 
 
 ---
 
@@ -26,6 +26,10 @@ An interactive dashboard that visualizes water sample data from New York City, b
   - Works independently from the search bar
   - Both search and filter dynamically update the results
 - ✅ Includes visualizations using **Recharts** for trends and summaries
+- Used React Router to build navigation around the application
+Use Link to dynamically generate a list of routes
+Use useParams() hook to extract parameters from a URL
+Install and integrate an npm library into an existing React app
 
 ---
 
